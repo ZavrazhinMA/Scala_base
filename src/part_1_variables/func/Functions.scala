@@ -10,7 +10,6 @@ object Functions extends App{
   def aParameterlessFunction(): Unit = println("Function with no parameters")
 
   aParameterlessFunction()
-  aParameterlessFunction
 
   def aFunctionWithDefaultParameter(x: Int, y: String = "Default Parameter"): String = {
     s"x = $x and y = $y"
@@ -32,7 +31,6 @@ object Functions extends App{
   callByName(System.nanoTime())
 
   def aCondition(): Boolean = if (1 < 2) true else false
-
 
   def someFunnc(x: =>Int, y: =>Int): Int = {
     if (aCondition()) x * 2
