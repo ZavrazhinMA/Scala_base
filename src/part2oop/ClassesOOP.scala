@@ -47,12 +47,12 @@ object ClassesOOP extends App {
   val student4_4 = new Student4(3, "Kesha")
 
   class Instructor22(val id: Int, val name: String, val surname: String) {
-    def fillName(): String = {
+    def fillName: String = {
     s"${this.name.capitalize}  ${this.surname.capitalize}"
   }
 }
   val gg = new Instructor22(1, "jjj", "dggg")
-  print(gg.fillName().toString)
+  print(gg.fillName.toString)
 
 
 //  ================================================

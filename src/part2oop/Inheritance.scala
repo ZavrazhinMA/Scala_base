@@ -128,4 +128,23 @@ object Inheritance extends App{
       println(s"Subscription Status: $SUBSCRIPTION_STATUS")
     }
   }
+  //--------------------------===================-------------------
+  trait Device {
+    def processDoc: Unit
+  }
+
+  trait Printer extends Device {
+    override def processDoc: Unit = println("print your txt")
+  }
+
+  trait Scanner extends Device {
+    override def processDoc: Unit = println("scan your txt")
+  }
+
+  class ComboDevice extends Printer with Scanner
+
+  val device = new ComboDevice
+  device.processDoc
 }
+
+
